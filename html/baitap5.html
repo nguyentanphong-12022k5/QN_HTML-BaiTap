@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px auto;
+        }
+        
+        .waraper {
+            height: 700px;
+            width: 1089px;
+            background-color: aquamarine;
+            border: 10px solid rgb(0, 255, 174);
+        }
+        
+        header {
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(68, 133, 133);
+            text-align: left;
+            font-size: 16px;
+            margin: 0;
+        }
+        
+        nav {
+            height: 50px;
+            width: 1089px;
+            background-color: rgb(255, 0, 55);
+        }
+        
+        #content {
+            height: 500px;
+            width: 1089px;
+            background-color: black;
+        }
+        
+        aside {
+            height: 100%;
+            width: 40%;
+            background-color: rgb(111, 255, 0);
+            float: left;
+        }
+        
+        section {
+            height: 100%;
+            width: 60%;
+            background-color: rgb(229, 255, 0);
+            float: left;
+        }
+        
+        footer {
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(179, 0, 255);
+        }
+        
+        .clr {
+            clear: both;
+        }
+        
+        header img {
+            height: 100px;
+            width: auto;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .search {
+            height: 150px;
+            width: auto;
+            display: block;
+            text-align: right;
+        }
+        
+        .specials {
+            flex: 1;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .column {
+            width: 48%;
+            background-color: rgb(229, 255, 150);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        div p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="waraper">
+        <div class="header">
+            <header>
+                <img src="/img/flower.png" alt="" />
+                <div>
+                    <h1>FlowerBox 360</h1>
+                    <p> ...to get your daily close of luxury roses!</p>
+                    <div class="search">
+                        <input type="text" placeholder="Search the site...">
+                        <button>go</button>
+                    </div>
+                </div>
+            </header>
+            <div class="menu">
+                <nav>
+                    <a href="#Home">Home</a>
+                    <a href="#Promotion">Promotion </a>
+                    <a href="#Gift Baskets">Gift Baskets </a>
+                    <a href="#Flowers Services">Flowers Services </a>
+                    <a href="#About">About </a>
+                </nav>
+            </div>
+            <div id="content">
+                <aside>
+                    <h1>Why Not Contact Us Today!</h1>
+                    <p>
+                        For FlowerBox 360 shopers, that means not only can you send your friends and loves ones the highest quality flowers found on online, but thatt you can do so at a great value. FlowerBox 360 Info!
+                    </p>
+                    <div class="form-group">
+                        <label for="Name">Name</label><br />
+                        <input type="text" name="Name" id="Name" />
+                        <label for="Email">Email</label>
+                        <input type="text" name="Email" id="Email" />
+                        <label for="telephone">telephone</label><br />
+                        <input type="text " name="telephone" id="telephone" />
+                        <label for="subject">subject</label>
+                        <input type="text" name="subject" id="subject" />
+                        <label for="message">message</label><br />
+                        <input type="text" name="message" id="message" /> <br /><input type="button" value="submit" />
+                        <input type="button" value="Reset" />
+                    </div>
+                </aside>
+                <section>
+                    <div class="columns">
+                        <div class="column">
+                            <h2>For FlowerBox 360 shoppers</h2>
+                            <p>
+                                Operating Hours: <br />Monday-Friday: 9:00am-5:00pm <br /> Saturday: 9:00am-1.00pm. <br />Sunday: Closed (No Deliveries) <br /> ORDER ONLINE 24/7
+                            </p>
+                            <p>
+                                12 Nguyen Van Bao, Ward 4,<br> Go Vap District,<br> Ho Chi Minh City <br> Tel: 0283.8940 390 <br> Fax: 0283.9940 954
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h3>Discounts & Specials</h3>
+                            <div class="specials">
+                                <p>
+                                    FlowerBox 360 offers many great discounts throughout the year, from coupons and coupon codes, to promo codes and other savings. We also offer military flower discounts to our wonderful troops!
+                                </p>
+                                <a href="#" class="read-more">Read More »</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <footer>Copyright © 2017 - All Rights Reserved - Software Engineering Department - Industrial University of Ho Chi Minh City</footer>
+        </div>
+</body>
+
+</html>
