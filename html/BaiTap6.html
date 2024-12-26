@@ -1,156 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      * {
-        padding: 0px;
-        margin: 0px auto;
-      }
-
-      .wrapper {
-        height: 700px;
-        width: 1089px;
-        background-color: azure;
-        border: 1px solid red;
-      }
-
-      header {
-        height: 150px;
-        width: 1089px;
-        background-color: rgb(68, 133, 133);
-      }
-
-      nav {
-        height: 50px;
-        width: 1089px;
-        background-color: rgb(207, 111, 133);
-      }
-
-      #content {
-        height: 500px;
-        width: 1089px;
-        background-color: rgb(82, 33, 217);
-      }
-
-      aside {
-        height: 100%;
-        width: 40%;
-        background-color: white;
-        float: left;
-        margin-bottom: 10px;
-      }
-
-      section {
-        height: 100%;
-        width: 60%;
-        background-color: blueviolet;
-        float: left;
-      }
-
-      footer {
-        height: 150px;
-        width: 1089px;
-        background-color: aqua;
-      }
-
-      .clr {
-        clear: both;
-      }
-
-      .menu a {
-        display: flex;
-        justify-content: space-around;
-        background-color: white;
-        color: orange;
-        float: left;
-        padding: 10px;
-        font-size: 20px;
-      }
-
-      .form-group {
-        margin-top: auto;
-      }
-
-      .form-group input {
-        border: none;
-        border-bottom: 1px solid #000;
-        outline: none;
-        width: 300px;
-        font-size: 16px;
-        padding: 5px;
-        margin-bottom: 10px;
-      }
-
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: orange;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
+        * {
+            padding: 0px;
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+        
+        body {
+            position: relative;
+        }
+        
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+            background-color: azure;
+            border: 1px solid red;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        
+        header {
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(68, 133, 133);
+        }
+        
+        nav {
+            height: 50px;
+            width: 1089px;
+            background-color: rgb(207, 111, 133);
+        }
+        
+        #content {
+            height: 500px;
+            width: 1089px;
+            background-color: rgb(82, 33, 217);
+        }
+        
+        aside {
+            height: 100%;
+            width: 70%;
+            background-color: white;
+            float: left;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        
+        section {
+            height: 100%;
+            width: 30%;
+            background-color: white;
+            float: left;
+            padding-top: 10px;
+        }
+        
+        footer {
+            height: 150px;
+            width: 1089px;
+            background-color: aqua;
+        }
+        
+        .clr {
+            clear: both;
+        }
+        
+        .menu a {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            color: orange;
+            float: left;
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        
+        .form-group {
+            margin-top: auto;
+        }
+        
+        .form-group input {
+            border: none;
+            border-bottom: 1px solid #000;
+            outline: none;
+            width: 720px;
+            font-size: 16px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .link h1 {
+            padding: 10px 0px 40px 20px;
+        }
+        
+        .link {
+            margin-top: 20px;
+            background-color: #ffe100;
+            border-radius: 30px 30px 0px 0px;
+        }
+        
+        .link a {
+            display: flex;
+            margin-left: 100px;
+            color: orange;
+            text-decoration: none;
+            line-height: 1px;
+            text-indent: 15px;
+        }
+        
+        .link a::before {
+            content: "\25A0";
+            margin-left: 5px;
+        }
+        
+        footer h2 {
+            padding: 90px;
+            padding-top: 10px;
+            text-align: center;
+        }
+        
+        .More {
+            padding-top: 10px;
+        }
+        
+        #content p {
+            font-style: italic;
+            font-size: large;
+            padding-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .border {
+            position: absolute;
+            top: 30%;
+            left: 60%;
+            height: 489px;
+            width: 1px;
+            background-color: black;
+            transform: translateX(-50%);
+        }
+        
+        .More img {
+            float: left;
+            margin-right: 20px;
+            height: 100px;
+            width: 100px;
+            border: 5px solid rgba(0, 0, 0, 0.3);
+        }
+        
+        .More p {
+            font-size: 70px;
+            font-weight: bold;
+            color: #333;
+            padding: 10px;
+            word-spacing: 10px;
+        }
+        
+        footer {
+            height: 150px;
+            width: 1089px;
+        }
+        
+        .clr {
+            clear: both;
+        }
     </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="wrapper">
-      <header>
-        <h1>AUTUMN TRAVEL COMPANY</h1>
-      </header>
-      <div class="menu">
-        <nav>
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#products">Products</a>
-          <a href="#services">Services</a>
-          <a href="#order">Order</a>
-        </nav>
-      </div>
-      <div id="content">
-        <aside>
-          <h1>Sign up for membership benefits</h1>
-          <p>
-            Our philosophical values are transparency, respect, formality <br />
-            responsibility. Our stimulus is your enthusiasm. Our motto is your
-            satisfaction.
-          </p>
-          <div class="form-group">
-            <label for="username">Username</label><br />
-            <input type="text" name="username" id="username" /><br />
-            <label for="E-mail">E-mail</label><br />
-            <input type="text " name="E-mail" id="E-mail" /><br />
-            <label for="Password">Password</label><br />
-            <input type="password" name="Password" id="Password" /><br />
-            <label for="Retype password">Retype password</label><br />
-            <input
-              type="password"
-              name="Retype password"
-              id="Retype password"
-            /><br />
-            <button>SIGN ME UP</button>
-          </div>
-        </aside>
-        <section>
-          <div class="link">
-            <h1>LINK</h1>
-            <ul>
-              <li><link rel="stylesheet" href="" />Make your Own Tour</li>
-              <li><link rel="stylesheet" href="" />Maldives Tours <br /></li>
-              <li>
-                <link rel="stylesheet" href="" />Nature & Adventure <br />
-              </li>
-              <li><link rel="stylesheet" href="" />ReadymadeTours <br /></li>
-              <li><link rel="stylesheet" href="" />Europe Tours <br /></li>
-              <li><link rel="stylesheet" href="" />Rusia Tours <br /></li>
-            </ul>
-          </div>
-        </section>
-      </div>
+        <header>
+            <h1>AUTUMN TRAVEL COMPANY</h1>
+        </header>
+        <div class="menu">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#services">Services</a>
+                <a href="#order">Order</a>
+            </nav>
+        </div>
+        <div id="content">
+            <aside>
+                <h1>Sign up for membership benefits</h1>
+                <p>
+                    Our philosophical values are transparency, respect, formality responsibility. Our stimulus is your enthusiasm. Our motto is your satisfaction.
+                </p>
+                <div class="form-group">
+                    <label for="username">Username</label><br />
+                    <input type="text" name="username" id="username" /><br />
+                    <label for="E-mail">E-mail</label><br />
+                    <input type="text " name="E-mail" id="E-mail" /><br />
+                    <label for="Password">Password</label><br />
+                    <input type="password" name="Password" id="Password" /><br />
+                    <label for="Retype password">Retype password</label><br />
+                    <input type="password" name="Retype password" id="Retype password" /><br />
+                    <button>SIGN ME UP</button>
+                </div>
+            </aside>
+            <div class="border"></div>
+            <section>
+                <div class="link">
+                    <h1>LINK</h1>
 
-      <footer></footer>
+                    <a href="">Make your Own Tour</a><br />
+
+                    <a href="">Maldives Tours</a>
+                    <br />
+
+                    <a href="">Nature & Adventure</a>
+                    <br />
+
+                    <a href="">ReadymadeTours</a>
+                    <br />
+
+                    <a href="">Europe Tours</a>
+                    <br />
+
+                    <a href="">Rusia Tours</a>
+                    <br />
+                </div>
+                <div class="More">
+
+                    <h1>More Info</h1>
+                    <img src="/img/flower.png" alt="hoa">
+                    <p>
+                        Our purpose is the client who gives to us the opportunites to serve and to make known the reality arround the world
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <h2>2017 Software Engineering Department Test Date 16 Sep 2017</h2>
+        </footer>
     </div>
-  </body>
+</body>
+
 </html>

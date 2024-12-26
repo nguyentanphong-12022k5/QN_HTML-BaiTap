@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text with Image on Left</title>
+    <style>
+        .flex-container {
+            display: flex;
+            /* Chế độ Flexbox */
+            align-items: center;
+            /* Canh giữa theo chiều dọc */
+        }
+        
+        .flex-container img {
+            margin-right: 20px;
+            /* Tạo khoảng cách giữa hình ảnh và văn bản */
+            height: 50px;
+            /* Chỉnh kích thước hình ảnh */
+        }
+        
+        .flex-container .text {
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <img src="https://via.placeholder.com/50" alt="icon">
+        <div class="text">
+            Đây là văn bản có hình ảnh ở góc trái và chữ vẫn hiển thị bên phải.
+        </div>
+    </div>
+</body>
+
+</html>
