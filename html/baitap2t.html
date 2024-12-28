@@ -9,33 +9,62 @@
         * {
             padding: 0px;
             margin: 0px auto;
+            box-sizing: border-box;
         }
         
         .waraper {
             height: 700px;
             width: 1089px;
             background-color: aquamarine;
-            border: 10px solid rgb(0, 255, 174);
+            border: 1px solid rgb(0, 255, 174);
         }
         
         header {
+            float: left;
+            align-items: center;
+            justify-content: space-between;
             height: 150px;
             width: 1089px;
             background-color: rgb(68, 133, 133);
             text-align: left;
             font-size: 16px;
             margin: 0;
+            align-items: center;
+            justify-content: flex-start;
         }
         
         nav {
-            height: 50px;
-            width: 1089px;
-            background-color: rgb(255, 0, 55);
+            float: right;
+        }
+        
+        .header-1 div {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header-1 img,
+        h1,
+        p {
+            margin: 1px;
+            padding-top: px;
+        }
+        
+        .menu ul {
+            list-style: none;
+        }
+        
+        .menu li {
+            display: inline-block;
+            padding: 10px;
+            font-size: 25.6px;
+            text-decoration: none;
+            color: red;
+            margin-right: 5px;
         }
         
         #content {
             height: 500px;
-            width: 1089px;
+            width: 100%;
             background-color: black;
         }
         
@@ -55,8 +84,9 @@
         
         footer {
             height: 150px;
-            width: 1089px;
+            width: 100%;
             background-color: rgb(179, 0, 255);
+            text-align: center;
         }
         
         .clr {
@@ -68,6 +98,8 @@
             width: auto;
             align-items: center;
             gap: 10px;
+            float: left;
+            margin-right: 10px;
         }
         
         .search {
@@ -75,12 +107,19 @@
             width: auto;
             display: block;
             text-align: right;
+            margin: 10px;
         }
         
         .specials {
             flex: 1;
             padding: 10px;
             text-align: left;
+        }
+        
+        .specials a {
+            text-decoration: none;
+            float: right;
+            padding-top: 100px;
         }
         
         .columns {
@@ -99,6 +138,24 @@
         div p {
             margin-bottom: 20px;
         }
+        
+        #content aside {
+            padding-left: 10px;
+        }
+        
+        #message {
+            height: 100px;
+            width: 90%;
+        }
+        
+        #button {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        .column {
+            font-size: large;
+        }
     </style>
 </head>
 
@@ -108,23 +165,30 @@
             <header>
                 <img src="/img/flower.png" alt="" />
                 <div>
-                    <h1>FlowerBox 360</h1>
-                    <p> ...to get your daily close of luxury roses!</p>
+                    <div class="header-1">
+                        <h1>FlowerBox 360</h1>
+                        <p> ...to get your daily close of luxury roses!</p>
+                    </div>
                     <div class="search">
                         <input type="text" placeholder="Search the site...">
                         <button>go</button>
+                        <div class="menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">Promotion</a></li>
+                                    <li><a href="#">Gift Baskets</a></li>
+                                    <li><a href="#">Flower Services</a></li>
+                                    <li><a href="#">About</a></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
+
                 </div>
             </header>
-            <div class="menu">
-                <nav>
-                    <a href="#Home">Home</a>
-                    <a href="#Promotion">Promotion </a>
-                    <a href="#Gift Baskets">Gift Baskets </a>
-                    <a href="#Flowers Services">Flowers Services </a>
-                    <a href="#About">About </a>
-                </nav>
-            </div>
+
+
             <div id="content">
                 <aside>
                     <h1>Why Not Contact Us Today!</h1>
@@ -136,13 +200,14 @@
                         <input type="text" name="Name" id="Name" />
                         <label for="Email">Email</label>
                         <input type="text" name="Email" id="Email" />
-                        <label for="telephone">telephone</label><br />
+                        <label for="telephone">Telephone</label><br />
                         <input type="text " name="telephone" id="telephone" />
-                        <label for="subject">subject</label>
+                        <label for="subject">Subject</label>
                         <input type="text" name="subject" id="subject" />
-                        <label for="message">message</label><br />
-                        <input type="text" name="message" id="message" /> <br /><input type="button" value="submit" />
-                        <input type="button" value="Reset" />
+                        <label for="message">Message</label><br />
+                        <input type="text" name="message" id="message" autofocus/> <br />
+                        <input type="button" value="Submit" id="button" />
+                        <input type="button" value="Reset" id="button" />
                     </div>
                 </aside>
                 <section>
