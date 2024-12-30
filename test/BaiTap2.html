@@ -1,116 +1,329 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>FlowerBox 360</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
-        /* Định dạng chung */
-        
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        * {
+            padding: 0px;
+            margin: 0px auto;
+            box-sizing: border-box;
         }
-        /* Header */
+        
+        .waraper {
+            height: 620px;
+            width: 1089px;
+            background-color: aquamarine;
+            border: 1px solid rgb(0, 255, 174);
+        }
         
         header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-        /* Navigation */
-        
-        nav ul {
-            list-style: none;
-            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            /* Đảm bảo các phần tử trong header phân bố đều */
+            align-items: center;
+            height: 100px;
+            width: 1089px;
+            background-color: rgb(41, 78, 121);
+            text-align: left;
+            font-size: 16px;
             margin: 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .header-1 {
+            margin-right: 750px;
+            margin-top: 20px;
+            /* Để phần text có khoảng cách với logo */
+        }
+        
+        .header-1 h1 {
+            margin-top: 0px;
+        }
+        
+        .search {
+            display: flex;
+            position: absolute;
+            text-align: right;
+            margin: 10px;
+            top: 10px;
+            left: 80%;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            width: 700px;
+            float: right;
+        }
+        
+        nav {
+            margin-right: 0;
+        }
+        
+        .menu ul {
+            list-style: none;
             display: flex;
             justify-content: center;
+            padding: 0px;
+            padding-left: 2px;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 38%;
+            top: 50%;
         }
         
-        nav li {
-            margin: 0 10px;
+        .menu li {
+            padding: 10px;
         }
-        /* Main content */
         
-        main {
+        .menu a {
+            text-decoration: none;
+            color: white;
+            /* Màu sắc của chữ trong menu */
+            font-size: 155%;
+            /* Kích thước chữ */
             display: flex;
-            justify-content: space-around;
-            padding: 20px;
+            background-color: rgb(61, 115, 177);
+            padding-bottom: 9px;
+            text-align: center;
+            padding: 5px;
         }
-        /* Form */
         
-        form {
-            width: 300px;
+        #content {
+            height: 500px;
+            width: 100%;
+            background-color: white;
         }
-        /* Discount section */
         
-        .discount {
-            /* Định dạng cho phần giảm giá */
+        aside {
+            height: 100%;
+            width: 40%;
+            float: left;
         }
-        /* Footer */
+        
+        section {
+            height: 100%;
+            width: 60%;
+            float: left;
+        }
         
         footer {
-            background-color: #ccc;
+            height: 100%;
+            width: 100%;
             text-align: center;
+            background-color: rgb(28, 52, 81);
+            color: rgb(97, 116, 136);
+        }
+        
+        .clr {
+            clear: both;
+        }
+        
+        header img {
+            height: 100px;
+            width: auto;
+            align-items: center;
+            gap: 10px;
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .search {
+            display: flex;
+            position: absolute;
+            text-align: right;
+            margin: 10px;
+            display: block;
+            top: 0%;
+            left: 80%;
+        }
+        
+        .specials {
+            flex: 1;
             padding: 10px;
+            text-align: left;
+        }
+        
+        .specials a {
+            text-decoration: none;
+            float: right;
+            padding-top: 100px;
+        }
+        
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .column-1 {
+            width: 48%;
+            padding: 20px;
+            border-radius: 5px;
+            padding-top: 50px;
+        }
+        
+        .column-2 {
+            width: 48%;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+        
+        .column-1 h2,
+        .column-2 h3 {
+            border-bottom: 2px dashed #000;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .column-1 p {
+            padding-bottom: 20px;
+        }
+        
+        #content aside {
+            padding-left: 10px;
+        }
+        
+        #content aside h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            display: inline-block;
+            /* Đảm bảo h1 không chiếm toàn bộ chiều rộng */
+            position: relative;
+            /* Để định vị đường kẻ đứt */
+        }
+        
+        #content aside h1::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            /* Bắt đầu từ ngoài phạm vi của h1 */
+            bottom: 0;
+            width: 750px;
+            /* Đặt chiều dài đường kẻ đứt bằng chiều rộng của viewport */
+            border-bottom: 2px dashed #000;
+            /* Đường kẻ đứt */
+        }
+        
+        #message {
+            height: 100px;
+            width: 90%;
+        }
+        
+        #button {
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        
+        .column {
+            font-size: large;
+        }
+        
+        header {
+            position: relative;
+        }
+        
+        .column-2 img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>FlowerBox 360</h1>
-        <p>...to get your daily dose of luxury roses!</p>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Promotion</a></li>
-                <li><a href="#">Gift Baskets</a></li>
-                <li><a href="#">Flower Services</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Why Not Contact Us Today!</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="telephone">Telephone:</label>
-                <input type="tel" id="telephone" name="telephone">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
-            </form>
-        </section>
-        <section>
-            <h2>FlowerBox 360 Info!</h2>
-            <p>
-                Operating Hours:<br> Monday-Friday: 9:00am-5:00pm<br> Saturday: 9:00am-1:00pm<br> Sunday: Closed (No Deliveries)<br> ORDER ONLINE 24/7
-            </p>
-            <p>
-                Software Engineering Dept.<br> Information Technology Faculty<br> First Floor, H Building<br> 12 Nguyen Van Bao St., Ward 4<br> Go Vap District<br> Ho Chi Minh City<br> Tel: 0283.8940 390<br> Fax: 0283.9940 954
-            </p>
-            <div class="discount">
-                <h3>Discounts & Specials</h3>
-                <p>
-                    FlowerBox 360 offers many great discounts throughout the year...
-                </p>
-                <a href="#">Read More</a>
+    <div class="waraper">
+        <div class="header">
+            <header>
+                <img src="/img/flower.png" alt="" />
+                <div>
+                    <div class="header-1">
+                        <h1>FlowerBox 360</h1>
+                        <p> ...to get your daily close of luxury roses!</p>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="Search the site...">
+                        <button>go</button>
+                    </div>
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Promotion</a></li>
+                                <li><a href="#">Gift Baskets</a></li>
+                                <li><a href="#">Flower Services</a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                </div>
+            </header>
+
+
+            <div id="content">
+                <aside>
+                    <h1>Why Not Contact Us Today!</h1>
+                    <p>
+                        For FlowerBox 360 shopers, that means not only can you send your friends and loves ones the highest quality flowers found on online, but thatt you can do so at a great value. FlowerBox 360 Info!
+                    </p>
+                    <div class="form-group">
+                        <label for="Name">Name</label><br />
+                        <input type="text" name="Name" id="Name" />
+                        <label for="Email">Email</label>
+                        <input type="text" name="Email" id="Email" />
+                        <label for="telephone">Telephone</label><br />
+                        <input type="text " name="telephone" id="telephone" />
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" />
+                        <label for="message">Message</label><br />
+                        <input type="text" name="message" id="message" autofocus/> <br />
+                        <input type="button" value="Submit" id="button" />
+                        <input type="button" value="Reset" id="button" />
+                    </div>
+                </aside>
+                <section>
+                    <div class="columns">
+                        <div class="column-1">
+                            <h2>For FlowerBox 360 shoppers</h2>
+                            <p>
+                                Operating Hours: <br />Monday-Friday: 9:00am-5:00pm <br /> Saturday: 9:00am-1.00pm. <br />Sunday: Closed (No Deliveries) <br /> ORDER ONLINE 24/7
+                            </p>
+                            <p>Software Engineering Dept. <br> Information Technology Faculty First Floor, H Building</p>
+                            <p>
+                                12 Nguyen Van Bao, Ward 4,<br> Go Vap District,<br> Ho Chi Minh City <br> Tel: 0283.8940 390 <br> Fax: 0283.9940 954
+                            </p>
+                        </div>
+                        <div class="column-2">
+                            <h3>Discounts & Specials</h3>
+                            <img src="/img/rose.png" alt="Hoa">
+                            <div class="specials">
+                                <p>
+                                    FlowerBox 360 offers many great discounts throughout the year, from coupons and coupon codes, to promo codes and other savings. We also offer military flower discounts to our wonderful troops!
+                                </p>
+                                <a href="#" class="read-more">Read More »</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
             </div>
-        </section>
-    </main>
-    <footer>
-        Copyright © 2017 - All Rights Reserved
-    </footer>
+            <footer>Copyright © 2017 - All Rights Reserved - Software Engineering Department - Industrial University of Ho Chi Minh City</footer>
+        </div>
 </body>
 
 </html>

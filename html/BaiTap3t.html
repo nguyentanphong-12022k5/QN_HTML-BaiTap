@@ -12,22 +12,17 @@
             box-sizing: border-box;
         }
         
-        body {
-            position: relative;
-        }
-        
         .wrapper {
             height: 700px;
             width: 1089px;
-            background-color: azure;
+            background-color: white;
             border: 1px solid red;
-            margin: 0px auto;
-            justify-content: space-between;
         }
         
         header {
+            display: flex;
             height: 150px;
-            width: 1089px;
+            width: 100%;
             background-color: rgb(68, 133, 133);
         }
         
@@ -38,9 +33,9 @@
         }
         
         #content {
+            display: flex;
             height: 500px;
             width: 1089px;
-            background-color: rgb(82, 33, 217);
         }
         
         aside {
@@ -49,6 +44,7 @@
             background-color: white;
             float: left;
             padding: 10px;
+            border-right: 1px solid black;
         }
         
         section {
@@ -57,6 +53,7 @@
             background-color: white;
             float: left;
             padding-top: 10px;
+            margin-left: 10px;
         }
         
         footer {
@@ -115,14 +112,14 @@
         
         .link {
             margin-top: 20px;
-            background-color: #ffe100;
+            background-color: rgb(250, 235, 215);
             border-radius: 30px 30px 0px 0px;
         }
         
         .link a {
             display: flex;
             margin-left: 100px;
-            color: orange;
+            color: rgb(206, 115, 115);
             text-decoration: none;
             line-height: 1px;
             text-indent: 15px;
@@ -131,6 +128,7 @@
         .link a::before {
             content: "\25A0";
             margin-left: 5px;
+            color: rgb(172, 75, 22);
         }
         
         footer h2 {
@@ -151,13 +149,14 @@
         }
         
         .border {
-            position: absolute;
+            position: relative;
             top: 30%;
-            left: 60%;
-            height: 489px;
+            left: 62.5%;
+            height: 459px;
             width: 1px;
             background-color: black;
             transform: translateX(-50%);
+            z-index: 10;
         }
         
         .More img {
@@ -210,7 +209,6 @@
                     <button>SIGN ME UP</button>
                 </div>
             </aside>
-            <div class="border"></div>
             <section>
                 <div class="link">
                     <h1>LINK</h1>

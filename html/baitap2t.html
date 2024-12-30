@@ -13,80 +13,115 @@
         }
         
         .waraper {
-            height: 700px;
+            height: 620px;
             width: 1089px;
             background-color: aquamarine;
             border: 1px solid rgb(0, 255, 174);
         }
         
         header {
-            float: left;
-            align-items: center;
+            display: flex;
             justify-content: space-between;
-            height: 150px;
+            /* Đảm bảo các phần tử trong header phân bố đều */
+            align-items: center;
+            height: 100px;
             width: 1089px;
-            background-color: rgb(68, 133, 133);
+            background-color: rgb(41, 78, 121);
             text-align: left;
             font-size: 16px;
             margin: 0;
-            align-items: center;
-            justify-content: flex-start;
         }
         
-        nav {
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .header-1 {
+            margin-right: 750px;
+            margin-top: 20px;
+            /* Để phần text có khoảng cách với logo */
+        }
+        
+        .header-1 h1 {
+            margin-top: 0px;
+        }
+        
+        .search {
+            display: flex;
+            position: absolute;
+            text-align: right;
+            margin: 10px;
+            top: 10px;
+            left: 80%;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: flex-end;
+            width: 700px;
             float: right;
         }
         
-        .header-1 div {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .header-1 img,
-        h1,
-        p {
-            margin: 1px;
-            padding-top: px;
+        nav {
+            margin-right: 0;
         }
         
         .menu ul {
             list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            padding-left: 2px;
+            margin-bottom: 10px;
+            position: absolute;
+            left: 38%;
+            top: 50%;
         }
         
         .menu li {
-            display: inline-block;
             padding: 10px;
-            font-size: 25.6px;
+        }
+        
+        .menu a {
             text-decoration: none;
-            color: red;
-            margin-right: 5px;
+            color: white;
+            /* Màu sắc của chữ trong menu */
+            font-size: 155%;
+            /* Kích thước chữ */
+            display: flex;
+            background-color: rgb(61, 115, 177);
+            padding-bottom: 9px;
+            text-align: center;
+            padding: 5px;
         }
         
         #content {
             height: 500px;
             width: 100%;
-            background-color: black;
+            background-color: white;
         }
         
         aside {
             height: 100%;
             width: 40%;
-            background-color: rgb(111, 255, 0);
             float: left;
         }
         
         section {
             height: 100%;
             width: 60%;
-            background-color: rgb(229, 255, 0);
             float: left;
         }
         
         footer {
-            height: 150px;
+            height: 100%;
             width: 100%;
-            background-color: rgb(179, 0, 255);
             text-align: center;
+            background-color: rgb(28, 52, 81);
+            color: rgb(97, 116, 136);
         }
         
         .clr {
@@ -103,11 +138,13 @@
         }
         
         .search {
-            height: 150px;
-            width: auto;
-            display: block;
+            display: flex;
+            position: absolute;
             text-align: right;
             margin: 10px;
+            display: block;
+            top: 0%;
+            left: 80%;
         }
         
         .specials {
@@ -128,19 +165,56 @@
             gap: 20px;
         }
         
-        .column {
+        .column-1 {
             width: 48%;
-            background-color: rgb(229, 255, 150);
-            padding: 10px;
+            padding: 20px;
             border-radius: 5px;
+            padding-top: 50px;
         }
         
-        div p {
+        .column-2 {
+            width: 48%;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            padding: 10px;
+        }
+        
+        .column-1 h2,
+        .column-2 h3 {
+            border-bottom: 2px dashed #000;
+            padding-bottom: 10px;
+            margin-top: 20px;
             margin-bottom: 20px;
+        }
+        
+        .column-1 p {
+            padding-bottom: 20px;
         }
         
         #content aside {
             padding-left: 10px;
+        }
+        
+        #content aside h1 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            display: inline-block;
+            /* Đảm bảo h1 không chiếm toàn bộ chiều rộng */
+            position: relative;
+            /* Để định vị đường kẻ đứt */
+        }
+        
+        #content aside h1::after {
+            content: '';
+            position: absolute;
+            left: 0%;
+            /* Bắt đầu từ ngoài phạm vi của h1 */
+            bottom: 0;
+            width: 750px;
+            /* Đặt chiều dài đường kẻ đứt bằng chiều rộng của viewport */
+            border-bottom: 2px dashed #000;
+            /* Đường kẻ đứt */
         }
         
         #message {
@@ -155,6 +229,16 @@
         
         .column {
             font-size: large;
+        }
+        
+        header {
+            position: relative;
+        }
+        
+        .column-2 img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -172,18 +256,19 @@
                     <div class="search">
                         <input type="text" placeholder="Search the site...">
                         <button>go</button>
-                        <div class="menu">
-                            <nav>
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Promotion</a></li>
-                                    <li><a href="#">Gift Baskets</a></li>
-                                    <li><a href="#">Flower Services</a></li>
-                                    <li><a href="#">About</a></li>
-                                </ul>
-                            </nav>
-                        </div>
                     </div>
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Promotion</a></li>
+                                <li><a href="#">Gift Baskets</a></li>
+                                <li><a href="#">Flower Services</a></li>
+                                <li><a href="#">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
 
                 </div>
             </header>
@@ -205,24 +290,26 @@
                         <label for="subject">Subject</label>
                         <input type="text" name="subject" id="subject" />
                         <label for="message">Message</label><br />
-                        <input type="text" name="message" id="message" autofocus/> <br />
+                        <textarea name="message" id="message"></textarea><br/>
                         <input type="button" value="Submit" id="button" />
                         <input type="button" value="Reset" id="button" />
                     </div>
                 </aside>
                 <section>
                     <div class="columns">
-                        <div class="column">
+                        <div class="column-1">
                             <h2>For FlowerBox 360 shoppers</h2>
                             <p>
                                 Operating Hours: <br />Monday-Friday: 9:00am-5:00pm <br /> Saturday: 9:00am-1.00pm. <br />Sunday: Closed (No Deliveries) <br /> ORDER ONLINE 24/7
                             </p>
+                            <p>Software Engineering Dept. <br> Information Technology Faculty First Floor, H Building</p>
                             <p>
                                 12 Nguyen Van Bao, Ward 4,<br> Go Vap District,<br> Ho Chi Minh City <br> Tel: 0283.8940 390 <br> Fax: 0283.9940 954
                             </p>
                         </div>
-                        <div class="column">
+                        <div class="column-2">
                             <h3>Discounts & Specials</h3>
+                            <img src="/img/rose.png" alt="Hoa">
                             <div class="specials">
                                 <p>
                                     FlowerBox 360 offers many great discounts throughout the year, from coupons and coupon codes, to promo codes and other savings. We also offer military flower discounts to our wonderful troops!
@@ -232,6 +319,7 @@
                         </div>
                     </div>
                 </section>
+
 
             </div>
             <footer>Copyright © 2017 - All Rights Reserved - Software Engineering Department - Industrial University of Ho Chi Minh City</footer>
