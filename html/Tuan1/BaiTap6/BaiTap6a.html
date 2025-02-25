@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header {
+            background-color: aqua;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        header h1 {
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+        
+        form {
+            padding: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-spacing: 10px;
+        }
+        
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Jackson</h1>
+            <h1>Electronic</h1>
+        </header>
+        <h1>Registration Form</h1>
+        <p>Register your Jackson Electronics product here</p>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="FirstName">First Name</label></td>
+                    <td><input type="text" name="FirstName" id="FirstName"></td>
+                    <td><label for="LastName">Last Name</label></td>
+                    <td><input type="text" name="LastName" id="LastName"></td>
+                </tr>
+                <tr>
+                    <td><label for="Address1">Address 1</label></td>
+                    <td><input type="text" name="Address1" id="Address1"></td>
+                </tr>
+                <tr>
+                    <td><label for="Address2">Address 2</label></td>
+                    <td><input type="text" name="Address2" id="Address2"></td>
+                </tr>
+                <tr>
+                    <td><label for="City">City</label></td>
+                    <td><input type="text" name="City" id="City"></td>
+                    <td><label for="State">State</label></td>
+                    <td><input type="text" name="State" id="State"></td>
+                    <td><label for="Zip">Zip</label></td>
+                    <td><input type="text" name="Zip" id="Zip"></td>
+                </tr>
+            </table>
+            <hr>
+            <table>
+                <tr>
+                    <td><label for="Product">Product</label></td>
+                    <td>
+                        <select name="Product" id="Product">
+                            <option value="">ScanMaster</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="Date">Date Purchased</label></td>
+                    <td><input type="date" name="Date" id="Date"></td>
+                </tr>
+                <tr>
+                    <td><label for="Serial">Serial #</label></td>
+                    <td><input type="text" name="Serial" id="Serial"></td>
+                </tr>
+                <tr>
+                    <td><label for="UsedFor">Used for</label></td>
+                    <td>
+                        <input type="radio" name="UsedFor" value="Home">Home
+                        <input type="radio" name="UsedFor" value="Educational">Educational
+                        <input type="radio" name="UsedFor" value="Business">Business
+                        <input type="radio" name="UsedFor" value="Other">Other
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="System">System (check all that apply)</label></td>
+                    <td>
+                        <input type="checkbox" name="System" value="Windows">Windows
+                        <input type="checkbox" name="System" value="UNIX">UNIX
+                        <input type="checkbox" name="System" value="Macintosh">Macintosh
+                        <input type="checkbox" name="System" value="Other">Other
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function xlMang() {
+            let arr = [1, 2, 3, 4];
+            // thêm vào cuối mảng
+            arr.push(5);
+            //duyệt in các phần tử của mảng
+            arr.forEach(num => document.write(num + "<br>"));
+            // xoá phần tử cuối mảng
+            arr.pop();
+            arr.forEach(num => document.write(num + "<br>"));
+            let numbers = [1, 2, 3, 4, 5, 6, 7];
+            // Duyệt mằng cách 2
+            numbers.forEach(function(number) {
+                document.write(number + "<br>")
+
+
+                // Sử dụng cả index và currentValue
+                let fruits = ['Apple', 'Banana', 'Cherry'];
+                fruits.forEach(function(fruit, index) {
+                    document.writeln(fruit, index);
+                });
+            });
+        }
+    </script>
+    <input type="button" value="click" onclick="xlMang();">
+</body>
+
+</html>

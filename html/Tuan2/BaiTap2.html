@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px auto;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            line-height: 1.5;
+            background-position: center;
+            padding: 20px;
+        }
+        
+        #container {}
+        
+        header {
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        header p {
+            background-image: url(/img/Tuan2/BaiTap2/background.png);
+            display: flex;
+            align-items: center;
+        }
+        
+        header img {
+            width: 100px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding-left: 20px;
+            background-color: aqua;
+        }
+        
+        nav ul li {
+            margin-right: 30px;
+            color: white;
+            padding: 1px;
+        }
+        
+        nav ul li:first-child {
+            color: black;
+        }
+        /* Căn chỉnh các phần tử trong section */
+        
+        .group {
+            display: flex;
+            justify-content: space-between;
+            /* Đưa các phần tử ra hai bên */
+            background-color: white;
+        }
+        
+        .from-group1 {
+            flex: 2;
+            border: 1px solid black;
+            margin-right: 20px;
+            border-top: 0;
+            border-left: 0;
+            border-bottom: 0;
+        }
+        
+        .from-group2 {
+            flex: 1;
+            line-height: 30px;
+        }
+        
+        article {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        article img {
+            width: 250px;
+            height: auto;
+            flex-shrink: 0;
+        }
+        
+        section ul,
+        section h1 {
+            list-style: none;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        
+        .from-group2 ul li {
+            padding: 10px;
+            border: 1px solid black;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            margin-left: 10px;
+        }
+        
+        footer {
+            background-image: url(/img/Tuan2/BaiTap2/background.png);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div id="container">
+            <header>
+                <p><img src="/img/Tuan2/BaiTap2/logo.png" alt="">YOKO'S KITCHEN <br> JAPANESE COOKING CLASSES</p>
+                <nav>
+                    <ul>
+                        <li>home</li>
+                        <li>classes</li>
+                        <li>catering</li>
+                        <li>about</li>
+                        <li>contact</li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="group">
+                <section class="from-group1">
+                    <article>
+                        <img src="/img/Tuan2/BaiTap2/image.png" alt="Japanese Vegetarian">
+                        <div>
+                            <h2>Japanese Vegetarian</h2>
+                            <h1>Five week course in London</h1>
+                            <p>A five week introduction to traditional Japanese vegetarian meals, teaching you a selection of rice and noodle dishes.</p>
+                        </div>
+                    </article>
+                    <article>
+                        <img src="/img/Tuan2/BaiTap2/teriyaki.jpg" alt="Sauces Masterclass">
+                        <div>
+                            <h2>Sauces Masterclass</h2>
+                            <h1>One day workshop</h1>
+                            <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Phần Popular Recipes di chuyển sang bên phải -->
+                <aside class="from-group2">
+                    <section>
+                        <h1>Popular Recipies</h1>
+                        <ul>
+                            <li>Yakitori (grilled chicken)</li>
+                            <li>Tsukune (minced chicken patties)</li>
+                            <li>Okonomiyaki (savory pancakes)</li>
+                            <li>Mizutaki (chicken stew)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h1>Contact</h1>
+                        <p> Yoko's Kitchen <br> 27 Redchurch Street <br> Shoreditch <br>London E2 7DP</p>
+                    </section>
+                </aside>
+            </div>
+
+            <footer>2011 Yoko's Kitchen</footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px auto;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            margin-left: 10px;
+        }
+        
+        .menu {
+            display: flex;
+            padding: 10px;
+        }
+        
+        .menu li {
+            list-style-type: none;
+            text-indent: 15px;
+            float: left;
+            border-right: 1px solid black;
+        }
+        
+        .menu li:last-child {
+            border-right: none;
+        }
+        
+        .menu a {
+            padding: 10px;
+        }
+        
+        .content {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Example Cafe Menu</h1>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Starters</a></li>
+                <li><a href="#">Main Courses</a></li>
+                <li><a href="#">Desserts</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <section>
+                <article class="from-group1">
+                    <h1>Starters</h1>
+                    <ul>
+                        <li>Chestnut and Mushroom Goujons <a href="#">(v)</a>
+                        </li>
+                        <li>Goat Cheese Salad
+                            <a href="#">(v)</a>
+                        </li>
+                        <li>Honey Soy Chicken Kebabs</li>
+                        <li>Seafood Salad</li>
+                    </ul>
+                    <a href="#">Back to top</a>
+                </article>
+                <article>
+                    <h1>Main courses</h1>
+                    <ul>
+                        <li>Spinach and Ricotta Roulade
+                            <a href="#">(v)</a>
+                        </li>
+                        <li>Beef Tournados with Mustard and Dill Sauce</li>
+                        <li>Roast Chicken Salad</li>
+                        <li>Icelandic Cod with Parsley Sauce</li>
+                        <li>Mushroom Wellington
+                            <a href="#">(v)</a>
+                        </li>
+                    </ul>
+                    <a href="#">Back to top</a></article>
+                <article>
+                    <h1>Desserts</h1>
+                    <ul>
+                        <li>Lemon Sorbet
+                            <a href="#">(v)</a>
+                        </li>
+                        <li>Chocolate Mud Pie<a href="#">(v)</a></li>
+                        <li>Pecan Pie<a href="#">(v) </a> </li>
+                        <li>Selection of Fine Cheeses from Around the World</li>
+                    </ul>
+                    <a href="#">Back to top</a></article>
+            </section>
+        </div>
+        <footer>
+            <p>Items marked with a (v) are suitable for vegetarians.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

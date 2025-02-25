@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Between Lines</title>
+    <style>
+        .line-with-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .line-with-text::before,
+        .line-with-text::after {
+            content: "";
+            flex: 1;
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+        }
+        
+        .line-with-text span {
+            margin: 0 10px;
+            background-color: white;
+            /* Nền trắng để che phần viền */
+            padding: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header></header>
+        <div class="line-with-text">
+            <span>Example Text</span>
+        </div>
+    </div>
+</body>
+
+</html>

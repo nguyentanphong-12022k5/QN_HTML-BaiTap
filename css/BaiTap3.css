@@ -1,0 +1,80 @@
+body {
+    padding: 0px auto;
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background-image: url(/img/Tuan2/BaiTap3/background.jpg);
+    color: white;
+}
+
+h2 {
+    width: auto;
+    padding-left: 20px;
+    font-size: 30px;
+    font-style: italic;
+    letter-spacing: 15px;
+    text-indent: 100px;
+    background-color: green;
+    margin-right: 10px;
+}
+
+h3 {
+    width: 240px;
+    padding-left: 230px;
+    background-color: green;
+}
+
+address {
+    text-align: center;
+    border-top: 1px solid green;
+    padding-top: 100px;
+    clear: all;
+}
+
+a:link {
+    color: purple;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:active {
+    color: rgb(255, 0, 0);
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+#links {
+    border-right: 2px solid green;
+    float: left;
+    width: 200px;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+#links ul {
+    list-style: none;
+    margin: 0px;
+    padding: 30px;
+}
+
+#links ul li {
+    padding: 10px;
+}
+
+#noidung {
+    margin-left: 200px;
+    padding-left: 20px;
+    border-left: 2px solid green;
+}
+
+#noidung img {
+    width: 20%;
+    height: auto;
+    float: right;
+    padding: 10px;
+}

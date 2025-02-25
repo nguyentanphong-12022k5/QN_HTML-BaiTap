@@ -1,0 +1,92 @@
+<!-- menu đa cấp -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px auto;
+            padding: 0px;
+        }
+        
+        .wrapper {
+            height: 800px;
+            width: 1089px;
+            background-color: antiquewhite;
+        }
+        
+        .menu li {
+            height: 50px;
+            width: 150px;
+            background-color: burlywood;
+            float: left;
+            line-height: 50px;
+            list-style-type: none;
+            text-indent: 15px;
+            position: relative;
+        }
+        
+        .menu li:hover {
+            background-color: cornsilk;
+        }
+        
+        li a {
+            text-decoration: none;
+        }
+        
+        li:hover>a {
+            color: crimson;
+            font-weight: bold;
+        }
+        
+        .menu li .sub-menu {
+            position: absolute;
+            display: none;
+        }
+        
+        li:hover>.sub-menu {
+            display: block;
+        }
+        
+        .menu li .sub-menu li .sub-menu {
+            display: none;
+        }
+        
+        .menu li .sub-menu li:hover .sub-menu {
+            display: block;
+            top: 0px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav></nav>
+        <ul class="menu">
+            <li><a href="#">ITEM1</a></li>
+            <li><a href="#">ITEM2</a></li>
+            <li><a href="#">ITEM3</a></li>
+            <li><a href="#">ITEM4</a></li>
+            <li><a href="#">ITEM5</a>
+                <ul class="sub-menu">
+                    <li><a href="#">sub-menu1</a></li>
+                    <li><a href="#">sub-menu2</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">sub-menu1.1</a></li>
+                            <li><a href="#">sub-menu2.1</a></li>
+                            <li><a href="#">sub-menu3.1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">sub-menu3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ITEM6</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
